@@ -25,6 +25,7 @@ public struct Container<Content: View, Accessory: View>: View {
 
 // MARK: - Style
 
+@MainActor
 public protocol ContainerStyle: DynamicProperty {
 
     typealias Configuration = ContainerStyleConfiguration
@@ -73,6 +74,7 @@ extension Scene {
 
 // MARK: - Configuration
 
+@MainActor
 public struct ContainerStyleConfiguration {
 
     public struct Content: View {

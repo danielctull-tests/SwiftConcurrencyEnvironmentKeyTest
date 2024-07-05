@@ -16,7 +16,11 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "SwiftConcurrencyEnvironmentKeyTest"
+            name: "SwiftConcurrencyEnvironmentKeyTest",
+            swiftSettings: [
+                .enableExperimentalFeature("StrictConcurrency"),
+            ]
         ),
-    ]
+    ],
+    swiftLanguageVersions: [.v6]
 )
